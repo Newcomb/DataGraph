@@ -31,9 +31,9 @@ var makeChart = function(data)
      .enter()
      .append("rect")
      .attr("x",function(d,i){return i*barWidth;})
-     .attr("y",function(d){return height - d.consumption/100;})
+     .attr("y",function(d){return height - d.consumption/1000;})
      .attr("width",barWidth-2)
-     .attr("height",function(d){return d.consumption/100;})
+     .attr("height",function(d){return d.consumption/1000;})
      .attr("fill","black");
 
 // labels
@@ -43,7 +43,7 @@ var makeChart = function(data)
      .append("text")
      .text(function(d){return d.num;})
      .attr("x",function(d,i){return (i+1)*barWidth-.5*barWidth;})
-     .attr("y",function(d){return height-d.consumption/100;})
+     .attr("y",function(d){return height-d.consumption/1000;})
      .attr("text-anchor","middle")
      .attr("fill","black");
 
