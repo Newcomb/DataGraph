@@ -34,7 +34,7 @@ var makeChart = function(data,way)
      .attr("y",function(d){return height - d.consumption/100;})
      .attr("width",barWidth-2)
      .attr("height",function(d){return d.consumption/100;})
-     .attr("fill",black;});
+     .attr("fill",black;);
 
 // labels
   svg.selectAll("text")
