@@ -17,8 +17,8 @@ var makeChart = function(data)
 {
   var width = 600;
   var height = 400;
-  var barWidth = width/(colorData).length;
-  var legHeight = height/(colorData).length;
+  var barWidth = width/(data).length;
+  var legHeight = height/(data).length;
   var svg;
 
     svg  = d3.select("svg")
@@ -27,7 +27,7 @@ var makeChart = function(data)
 
 // create the rectangles
   svg.selectAll("rect")
-     .data(colorData)
+     .data(data)
      .enter()
      .append("rect")
      .attr("x",function(d,i){return i*barWidth;})
@@ -38,7 +38,7 @@ var makeChart = function(data)
 
 // labels
   svg.selectAll("text")
-     .data(colorData)
+     .data(data)
      .enter()
      .append("text")
      .text(function(d){return d.num;})
@@ -49,7 +49,7 @@ var makeChart = function(data)
 
 /// legend
   svg.selectAll("rect1")
-     .data(colorData)
+     .data(data)
      .enter()
      .append("rect")
      .attr("x",function(d,i){return .9*width;})
@@ -60,7 +60,7 @@ var makeChart = function(data)
 
 // legend labels
    svg.selectAll("text1")
-      .data(colorData)
+      .data(data)
       .enter()
       .append("text")
       .text(function(d){return d.color;})
