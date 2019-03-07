@@ -23,7 +23,7 @@ var makeChart = function(data)
 
     svg  = d3.select("svg")
     .attr("width",width)
-    .attr("height",height);}
+    .attr("height",height);
 
 // create the rectangles
   svg.selectAll("rect")
