@@ -17,6 +17,10 @@ var makeChart = function(data)
 {
   var width = 1000;
   var height = 800;
+  //create scale variable
+//  var xScale=d3.scaleLinear().domain([d3.min(data, function(d){return[0];}),1055369]).range([0,width])
+//  var yScale=d3.scaleLinear().domain([d3.min(data, function(d){return[0];}),1055369]).range([0,height])
+
   var barWidth = width/(data).length;
   var legHeight = height/(data).length;
   var svg;
@@ -35,6 +39,18 @@ var makeChart = function(data)
      .attr("width",barWidth-2)
      .attr("height",function(d){return d.consumption/1500;})
      .attr("fill","black");
+   
+  // create the rectangles with scale
+  //svg.selectAll("rect")
+     //.data(data)
+    // .enter()
+     //.append("rect")
+     //.attr("x",function(d,i){return xScale(i);})
+     //.attr("y",function(d){return yScale(d[1]);})
+     //.attr("width",barWidth-2)
+     //.attr("height",function(d){return d.consumption/1500;})
+    // .attr("fill","black");
+
 
 // labels
   svg.selectAll("text")
