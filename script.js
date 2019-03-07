@@ -70,6 +70,8 @@ var makeChart = function(data)
       .attr("fill","black");
 
   svg.style("margin-right","50px");
+   
+  var scale=d3.scaleLinear().domain([0,
 
 }
 useCSV()
