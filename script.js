@@ -31,7 +31,7 @@ var makeChart = function(data,way)
      .enter()
      .append("rect")
      .attr("x",function(d,i){return i*barWidth;})
-     .attr("y",function(d){return height - d.consumption*/100;})
+     .attr("y",function(d){return height - d.consumption/100;})
      .attr("width",barWidth-2)
      .attr("height",function(d){return d.consumption/100;})
      .attr("fill",black;});
