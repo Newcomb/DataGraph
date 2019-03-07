@@ -48,7 +48,7 @@ var makeChart = function(data)
      .attr("fill","black");
 
 /// legend
-  svg.selectAll("text")
+  svg.selectAll("text2")
      .data(data)
      .enter()
      .append("text")
