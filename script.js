@@ -53,7 +53,7 @@ var makeChart = function(data)
      .enter()
      .append("text")
      .attr("x",function(d,i){return .9*width;})
-     .attr("y",function(d,i){return i*20+5;})
+     .attr("y",function(d,i){return i*20+7;})
      .attr("width",20)
      .attr("height",10)
      .text(function(d){return d.state;});
