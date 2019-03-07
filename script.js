@@ -2,9 +2,9 @@
 var useCSV = function(){
    var data = d3.csv("data.csv");
    data.then(
-     function(d){
-       console.log("data",d);
-       makeChart(d,"csv");
+     function(data){
+       console.log("data",data);
+       makeChart(data);
      }
    ,
    function(err){
@@ -73,4 +73,3 @@ var makeChart = function(data)
 
 }
 useCSV()
-makeChart(data)
