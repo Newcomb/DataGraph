@@ -15,8 +15,8 @@ var useCSV = function(){
 
 var makeChart = function(data)
 {
-  var width = 600;
-  var height = 400;
+  var width = 1000;
+  var height = 800;
   var barWidth = width/(data).length;
   var legHeight = height/(data).length;
   var svg;
