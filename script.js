@@ -73,8 +73,6 @@ var makeChart = function(data)
 
   svg.style("margin-right","50px");
    
-  var xScale=d3.scaleLinear().domain([d3.min(data, funciton(d){return[0]}),1055369]).range([0,width]);
-  var yScale=d3.scaleLinear().domain([d3.min(data, funciton(d){return[0]}),1055369]).range([0,height]);
 
 }
 useCSV()
