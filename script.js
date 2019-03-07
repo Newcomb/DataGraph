@@ -48,15 +48,15 @@ var makeChart = function(data)
      .attr("fill","black");
 
 /// legend
-  svg.selectAll("rect1")
+  svg.selectAll("text")
      .data(data)
      .enter()
-     .append("rect")
+     .append("text")
      .attr("x",function(d,i){return .9*width;})
      .attr("y",function(d,i){return i*20+5;})
      .attr("width",20)
      .attr("height",10)
-     .attr("fill",function(d){return d.state;});
+     .attr("text",function(d){return d.state;});
 
 // legend labels
    svg.selectAll("text1")
