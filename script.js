@@ -13,7 +13,7 @@ var useCSV = function(){
    });
 }
 
-var makeChart = function(data,way)
+var makeChart = function(data)
 {
   var width = 600;
   var height = 400;
@@ -72,4 +72,5 @@ var makeChart = function(data,way)
   svg.style("margin-right","50px");
 
 }
-useCSV(data)
+useCSV()
+makeChart(data)
