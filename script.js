@@ -56,7 +56,7 @@ var makeChart = function(data)
      .attr("y",function(d,i){return i*20+5;})
      .attr("width",20)
      .attr("height",10)
-     .attr("text",function(d){return d.state;});
+     .text(function(d){return d.state;});
 
 // legend labels
    svg.selectAll("text1")
@@ -66,8 +66,7 @@ var makeChart = function(data)
       .text(function(d){return d.consumption;})
       .attr("x",function(d,i){return .825*width;})
       .attr("y",function(d,i){return (i+1)*20 - 6;})
-      .attr("text-anchor","middle")
-      .attr("fill","black");
+      .attr("text-anchor","middle");
 
   svg.style("margin-right","50px");
 
