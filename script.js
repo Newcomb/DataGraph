@@ -31,9 +31,9 @@ var makeChart = function(data)
      .enter()
      .append("rect")
      .attr("x",function(d,i){return i*barWidth;})
-     .attr("y",function(d){return height - d.consumption/1000;})
+     .attr("y",function(d){return height - d.consumption/1500;})
      .attr("width",barWidth-2)
-     .attr("height",function(d){return d.consumption/1000;})
+     .attr("height",function(d){return d.consumption/1500;})
      .attr("fill","black");
 
 // labels
@@ -43,7 +43,7 @@ var makeChart = function(data)
      .append("text")
      .text(function(d){return d.num;})
      .attr("x",function(d,i){return (i+1)*barWidth-.5*barWidth;})
-     .attr("y",function(d){return height-d.consumption/1000;})
+     .attr("y",function(d){return height-d.consumption/1500;})
      .attr("text-anchor","middle")
      .attr("fill","black");
 
@@ -56,14 +56,14 @@ var makeChart = function(data)
      .attr("y",function(d,i){return i*20+5;})
      .attr("width",20)
      .attr("height",10)
-     .attr("fill",function(d){return d.color;});
+     .attr("fill",function(d){return d.state;});
 
 // legend labels
    svg.selectAll("text1")
       .data(data)
       .enter()
       .append("text")
-      .text(function(d){return d.color;})
+      .text(function(d){return d.consumption;})
       .attr("x",function(d,i){return .825*width;})
       .attr("y",function(d,i){return (i+1)*20 - 6;})
       .attr("text-anchor","middle")
